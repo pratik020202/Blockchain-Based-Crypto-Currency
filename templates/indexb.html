@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Based Cryptocurrency</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='lp.css') }}">
+</head>
+<body>
+    <section id="header">
+        <a href="#">Coin.</a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="indexb.html">Home</a></li>
+            </ul>
+        </div>
+       
+    </section>
+
+    <section id="Hero">
+        <div >
+            <form method="post" id="btncontainer">
+                <button  class="btn btn--secondary btn--block" type="submit" value="submit" id="button1">Mine</button>               
+            </form>
+            
+            <form action="/chain" method="post" id="btncontainer1">
+                <button   class="btn btn--secondary btn--block"  id="button2">View Chain</button>
+            </form>
+
+            <form action="/" method="post" id="btncontainer2">
+                <button href="" class="btn btn--secondary btn--block" type="button" id="button">Send</button>
+            </form>
+            
+        </div>
+            <!--div class="popup" id="popup">
+                <img src="{{ url_for('static',filename='img/tick.png') }}">
+                <h2>Thank You!</h2>
+                <p>New Block is Mined!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>-->
+        
+        
+        <div class="popup1">
+            <div class="popup1-content">
+                <img src="{{ url_for('static',filename='img/close.png') }}" alt="Close" class="close">
+                <img src="{{ url_for('static',filename='img/user.png') }}" alt="User">
+                <form action="#" method="post">
+                    <input type="text" name="rec_addr" placeholder="Recipient Address">
+                    <input type="text" name="amount" placeholder="Amount">
+                    <button href="" type="submit" value="submit">SEND</button>
+                </form>
+
+            </div>
+        </div>
+
+
+        
+    </section>
+
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+    <script>
+        function openChain(){
+            window.location.href="/chain"
+            console.log("works");
+        
+        }
+    </script>
+</body>
+</html>
